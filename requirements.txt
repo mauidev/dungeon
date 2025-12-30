@@ -1,0 +1,13 @@
+
+
+1. Each state is a node.
+
+2. Node has directions, N,S,W,E
+
+3. Game Loop generates next node after user enters direction.
+
+Results are shown to the player.
+Sometimes decisions need to be made.
+
+
+Enter next direction.
