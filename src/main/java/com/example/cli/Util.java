@@ -5,7 +5,7 @@ public class Util {
     /**
      * Determine location that the player is at when entering the room.
      * 
-     * @param cmd
+     * @param next the direction the player is moving 
      * @return
      */
     public static String playerRoomEntry(String next) {

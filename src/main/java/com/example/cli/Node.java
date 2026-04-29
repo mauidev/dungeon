@@ -52,6 +52,7 @@ public class Node {
        entry = Util.playerRoomEntry(next);
        System.out.println("  The entry is now: " + entry);
        Node node = exits.get(next);
+       // this is where the player enters the room
        node.setEntry(entry);
        return node;
    }
