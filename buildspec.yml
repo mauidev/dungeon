@@ -5,6 +5,7 @@ phases:
       java: corretto25
     commands:
       - echo Installing Maven...
+      - java -version
   build:
     commands:
       - java -version
