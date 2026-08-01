@@ -13,4 +13,4 @@ phases:
       - java -version
       - mvn clean package
       - echo "Building a Docker image.."
-      - docker build -t myImage . --file Dockerfile
+      - docker build -t myapp:latest .
