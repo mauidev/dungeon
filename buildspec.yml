@@ -3,7 +3,10 @@ phases:
   install:
     runtime-versions:
       java: corretto25
+      docker: 18
   build:
     commands:
       - java -version
       - mvn clean package
+      - echo "Building a Docker image.."
+      - docker build -t myImage . --file Dockerfile
