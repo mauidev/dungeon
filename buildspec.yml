@@ -1,4 +1,7 @@
 version: 0.2
+env:
+  variables:
+    ECR_REPO: 239325463569.dkr.ecr.us-west-2.amazonaws.com/demo/myapp
 phases:
   install:
     runtime-versions:
@@ -13,4 +16,4 @@ phases:
       - java -version
       - mvn clean package
       - echo "Building a Docker image.."
-      - docker build -t myapp:latest .
+      - docker build -t ${ECR_REPO}:${CODEBUILD_SOURCE_VERSION} .
