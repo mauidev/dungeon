@@ -16,9 +16,9 @@ phases:
       - java -version
       - mvn clean package
       - echo "Building a Docker image.."
-      - docker build -t ${ECR_REPO}:${CODEBUILD_SOURCE_VERSION} .
+      - docker build -t ${ECR_REPO}:latest .
       - echo "Logging into ECR.."
       - $(aws ecr get-login --no-include-email)
       - echo "Pushing Docker image to ECR.."
-      - docker push ${ECR_REPO}:${CODEBUILD_SOURCE_VERSION}
+      - docker push ${ECR_REPO}:latest
       - echo "Done."
