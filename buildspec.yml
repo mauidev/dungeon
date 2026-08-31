@@ -22,3 +22,7 @@ phases:
       - echo "Pushing Docker image to ECR.."
       - docker push ${ECR_REPO}:latest
       - echo "Done."
+      - echo Writing image definitions file...
+      - printf '[{"name":"'fargate-app'","imageUri":"%s"}]' $ECR_REPO:$latest > imagedefinitions.json
+  artifacts:
+    files: imagedefinitions.json
