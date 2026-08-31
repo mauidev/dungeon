@@ -54,68 +54,7 @@ public class NodeFactory {
                 return null;
         }
     }
-/* 
-    public Node createTIntersection(String cmd, Node last) {
-        String desc = "";
-        String[] exits = null;
 
-        switch (cmd) {
-            case "north":
-                desc = "You head north. There is a T intersection ahead.";
-                exits = new String[]{"south", "east", "west"}; 
-                break;
-            case "south":
-                desc = "You head south. There is a T intersection ahead.";
-                exits = new String[]{"north", "east", "west"};
-                break;
-            case "east":
-                desc = "You head east. There is a T intersection ahead.";
-                exits = new String[]{"west", "north", "south"};
-                break;
-            case "west":
-                desc = "You head west. There is a T intersection ahead.";
-                exits = new String[]{"east", "north", "south"};
-                break;
-            default:
-                break;
-        }
-
-        Node newNode = new Node(desc, exits);
-        String entry = playerRoomEntry(cmd); newNode.addNode(entry, last);
-        return newNode;
-    }
-
-    public Node createYIntersection(String cmd, Node last) {
-        String desc = "";
-        String[] exits = null;
-
-        switch (cmd) {
-            case "north":
-                desc = "You head north. There is a Y intersection ahead.";
-                exits = new String[]{"south", "east", "west"}; 
-                break;
-            case "south":
-                desc = "You head south. There is a Y intersection ahead.";
-                exits = new String[]{"north", "east", "west"};
-                break;
-            case "east":
-                desc = "You head east. There is a Y intersection ahead.";
-                exits = new String[]{"west", "north", "south"};
-                break;
-            case "west":
-                desc = "You head west. There is a Y intersection ahead.";
-                exits = new String[]{"east", "north", "south"};
-                break;
-            default:
-                break;
-        }
-
-        Node newNode = new Node(desc, exits);
-        String entry = playerRoomEntry(cmd);
-        newNode.addNode(entry, last);
-        return newNode;
-    }
-*/
     public Node createCorridorNode(String next, Node last) {
 
         System.out.println("Creating straight corridor...");
