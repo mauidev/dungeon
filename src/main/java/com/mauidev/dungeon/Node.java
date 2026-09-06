@@ -7,14 +7,14 @@ public class Node {
     
 
     private Map<String, String> descMap = new HashMap<>();
-    private Map<String, Node> exits = new HashMap<>();
+    private Map<String, Node> room = new HashMap<>();
 
     private String entry;
 
     public Node(Map<String,String> descMap, String ...movements) {
         this.descMap = descMap;
         for (String movement : movements) {
-            exits.put(movement, null); // null indicates unexplored direction
+            room.put(movement, null); // null indicates unexplored direction
         }
 
     }
@@ -34,15 +34,15 @@ public class Node {
     }
 
     public boolean validateDirection(String direction) {
-        return exits.containsKey(direction);
+        return room.containsKey(direction);
     }
 
    public boolean hasNode(String next) {
-        return exits.get(next) != null;
+        return room.get(next) != null;
    }
 
    public void addNode(String next, Node node) {
-       exits.put(next, node);
+       room.put(next, node);
    }   
 
    public Node enter(String next) {
@@ -51,7 +51,7 @@ public class Node {
 //       this.next = next;
        entry = Util.playerRoomEntry(next);
        System.out.println("  The entry is now: " + entry);
-       Node node = exits.get(next);
+       Node node = room.get(next);
        // this is where the player enters the room
        node.setEntry(entry);
        return node;

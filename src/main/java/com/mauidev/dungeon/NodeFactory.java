@@ -131,13 +131,8 @@ public class NodeFactory {
     }
 
     public Node createRight90_Corridor(String next, Node last) {
-
         String[] exits = null;
-
-
-
         Map<String,String> descMap = new HashMap<>();
-
         String entry = playerRoomEntry(next);
 
         switch(entry) {
@@ -169,11 +164,8 @@ public class NodeFactory {
                 break;    
                 
         }
-
         Node newNode = new Node(descMap, exits);
-
         newNode.addNode(entry, last);
-
         return newNode;
     }   
 
