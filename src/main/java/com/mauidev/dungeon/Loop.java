@@ -1,4 +1,4 @@
-package com.example.cli;
+package com.mauidev.dungeon;
 
 import java.util.Scanner;
 

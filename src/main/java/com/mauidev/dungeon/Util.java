@@ -1,4 +1,4 @@
-package com.example.cli;
+package com.mauidev.dungeon;
 
 public class Util {
 

@@ -14,7 +14,7 @@
         <maven.compiler.source>25</maven.compiler.source>
         <maven.compiler.target>25</maven.compiler.target>
         <maven.compiler.release>25</maven.compiler.release> 
-        <mainClass>com.example.cli.Main</mainClass>
+        <mainClass>com.mauidev.dungeon.Main</mainClass>
     </properties>
 
     <build>

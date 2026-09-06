@@ -33,7 +33,7 @@ mvn exec:java
 
 ## Development Conventions
 
-The project follows standard Java conventions. The code is organized into a single package `com.example.cli`.
+The project follows standard Java conventions. The code is organized into a single package `com.mauidev.dungeon`.
 
 *   `Main.java`: The entry point of the application. It creates a `Loop` object and starts the game.
 *   `Loop.java`: Contains the main game loop, user input handling, and procedural generation of new rooms.
